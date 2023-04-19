@@ -1,0 +1,53 @@
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/scss/functions";
+
+// Include any default variable overrides here
+$custom-theme-colors: (
+  "primary": #293241,
+  "secondary": #ee6c4d,
+  "light": #ffffff,
+  "dark": #000000,
+  "neutral": #e5e5e5,
+);
+
+$spacer: 4px;
+$custom-spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+);
+
+$font-family-base: Poppins, Arial, Helvetica, sans-serif;
+
+$btn-border-radius: 24px;
+$input-btn-padding-y: map-get($custom-spacers, 1);
+$input-btn-padding-x: map-get($custom-spacers, 5);
+$input-btn-font-size: 14px;
+$input-btn-line-height: 1.5;
+$btn-font-weight: 700;
+
+// Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "bootstrap/scss/variables";
+
+// Include any default map overrides here
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+$body-color: map-get($theme-colors, "primary");
+$body-bg: map-get($theme-colors, "neutral");
+// Include remainder of required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// Optionally include any other parts as needed
+@import "bootstrap/scss/utilities";
+
+// Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "bootstrap/scss/utilities/api";
+
+// Add additional custom code here
