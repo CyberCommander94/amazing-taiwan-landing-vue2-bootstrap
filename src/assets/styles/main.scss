@@ -1,3 +1,5 @@
-@import "fonts.scss";
-@import "custom-bootstrap-theme.scss";
-@import "bootstrap/scss/bootstrap.scss";
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "./custom-bootstrap-theme.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-vue/src/index.scss";

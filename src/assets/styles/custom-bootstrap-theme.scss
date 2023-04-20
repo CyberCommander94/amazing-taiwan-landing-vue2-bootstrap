@@ -1,7 +1,8 @@
 // Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "bootstrap/scss/functions";
+@import "~bootstrap/scss/functions";
 
 // Include any default variable overrides here
+
 $custom-theme-colors: (
   "primary": #293241,
   "secondary": #ee6c4d,
@@ -10,8 +11,8 @@ $custom-theme-colors: (
   "neutral": #e5e5e5,
 );
 
-$spacer: 4px;
-$custom-spacers: (
+$spacer: 0.25rem;
+$spacers: (
   0: 0,
   1: $spacer,
   2: $spacer * 2,
@@ -21,33 +22,46 @@ $custom-spacers: (
   6: $spacer * 6,
   7: $spacer * 7,
   8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+  11: $spacer * 11,
+  12: $spacer * 12,
 );
 
-$font-family-base: Poppins, Arial, Helvetica, sans-serif;
+$font-family-sans-serif: Roboto, Arial, Helvetica, sans-serif;
 
 $btn-border-radius: 24px;
-$input-btn-padding-y: map-get($custom-spacers, 1);
-$input-btn-padding-x: map-get($custom-spacers, 5);
-$input-btn-font-size: 14px;
-$input-btn-line-height: 1.5;
 $btn-font-weight: 700;
 
+$input-btn-padding-y: map-get($spacers, 1);
+$input-btn-padding-x: map-get($spacers, 4);
+$input-btn-font-size: 12px;
+$input-btn-line-height: 1.5;
+
+$input-btn-padding-y-sm: map-get($spacers, 2);
+$input-btn-padding-x-sm: map-get($spacers, 6);
+$input-btn-font-size-sm: 12px;
+$input-btn-line-height-sm: 1.5;
+
+$input-btn-padding-y-lg: map-get($spacers, 2);
+$input-btn-padding-x-lg: map-get($spacers, 8);
+$input-btn-font-size-lg: 17px;
+$input-btn-line-height-lg: 1.5;
+
 // Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
-@import "bootstrap/scss/variables";
+@import "~bootstrap/scss/variables";
 
 // Include any default map overrides here
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 $body-color: map-get($theme-colors, "primary");
-$body-bg: map-get($theme-colors, "neutral");
+$body-bg: map-get($theme-colors, "light");
 // Include remainder of required parts
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
 
 // Optionally include any other parts as needed
-@import "bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities";
 
 // Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import "bootstrap/scss/utilities/api";
 
 // Add additional custom code here

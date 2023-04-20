@@ -1,6 +1,6 @@
 <template>
   <div class="tai-app">
-    <AppHeader />
+    <AppNavbar />
     <HomePage />
     <AppFooter />
   </div>
@@ -8,14 +8,14 @@
 
 <script>
 import HomePage from "@/pages/HomePage.vue";
-import AppHeader from "@/components/layout/AppHeader.vue";
+import AppNavbar from "@/components/layout/AppNavbar.vue";
 import AppFooter from "@/components/layout/AppFooter.vue";
 
 export default {
   name: 'App',
   components: {
     HomePage,
-    AppHeader,
+    AppNavbar,
     AppFooter,
   }
 }
@@ -25,5 +25,14 @@ export default {
 .tai-app {
   width: 100vw;
   height: 100vh;
+  padding-top: 65px;
+}
+
+@include media-breakpoint-up(lg) {
+  .tai-app {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 91px;
+  }
 }
 </style>

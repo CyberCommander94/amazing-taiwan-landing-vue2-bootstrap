@@ -1,12 +1,17 @@
 <template>
-  <div></div>
+  <div class="container-fluid p-0">
+    <AppHeaderSection />
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script>
+import AppHeaderSection from "@/components/layout/AppHeaderSection.vue";
 
-<style lang="scss" scoped>
-.logo-img {
-  width: 74px;
-  height: auto;
-}
-</style>
+export default {
+  components: {
+    AppHeaderSection,
+  }
+};
+</script>
+
+<style lang="scss" scoped></style>
