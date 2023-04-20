@@ -117,7 +117,6 @@ export default {
 }
 @include media-breakpoint-up(sm) {
   .header-navbar {
-
     .navbar-toggle-btn {
       padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
     }
@@ -130,7 +129,6 @@ export default {
 
 @include media-breakpoint-up(lg) {
   .header-navbar {
-
     .navbar-toggle-btn {
       padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
     }
