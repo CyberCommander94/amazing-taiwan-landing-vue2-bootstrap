@@ -92,9 +92,8 @@ export default {
     &__text-container {
       width: 50%;
     }
+
     &__bg-image {
-      position: relative;
-      width: auto;
       height: 564px;
     }
 
@@ -120,6 +119,7 @@ export default {
     &__text-container {
       width: 50%;
     }
+
     &__title {
       font-size: 38px;
       line-height: 56px;
@@ -129,6 +129,7 @@ export default {
       font-size: 18px;
       line-height: 26px;
     }
+
     &__button {
       box-shadow: 0px 15px 27px 0px rgba(238, 108, 77, 0.63);
       padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
@@ -139,8 +140,6 @@ export default {
 @include media-breakpoint-up(lg) {
   .header-section {
     &__bg-image {
-      position: relative;
-      width: auto;
       height: 631px;
     }
 
